@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in post_list.reverse %}
+        <a href="{{ post.get_absolute_path }}">{{ post.title }}</a><br>
+        {{ post.get_short_content }}<br>
+        {{ post.timestamp }}<br>
+        {{ post.updated }}<br>
+        {{ post.id }}<br>
+    {% endfor %}
+{% endblock %}
